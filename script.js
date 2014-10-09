@@ -1,5 +1,5 @@
 var limit = {
-	min: 1, max: 718
+	min: 1, max: 195
 };
 var pkmElim = new Array();
 var pkmLike = new Array();
@@ -20,9 +20,8 @@ function startG() {
 }
 
 function updateGen(value, start) {
-	var _limits = [ [1, 718], 
-					[1, 151], [152, 251], [252, 386], 
-					[387, 493], [494, 649], [650, 718]];
+	var _limits = [ [1, 195], 
+					[1, 195]];
 	for(i = 0; i < _limits.length; i++) {
 		if(i == value) {
 			limit.min = document.getElementById('newPkm').checked ? _limits[i][0] : 1;
