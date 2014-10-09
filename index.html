@@ -22,9 +22,6 @@
 				width:auto;
 				padding-left:40px;
 				background-color:white;
-				border-color:black;
-				border-style: solid;
-    				border-width: 2px;
 			}
 			#grid, #settings {
 				display:inline-block;
@@ -47,37 +44,39 @@
 				text-align:center;
 				font-size:.7em;
 			}
+			.choice {
+				border-color:black;
+				border-style: solid;
+    				border-width: 2px;
+			}
 		</style>
 		<script src="script.js"></script>
 	</head>
 	<body style="background-color:#F0F0F0">
 		<div id="game">
-			<p>Choose your generation. Then click on an egg to begin.</p>
-			<p>Pick your favorite of the two pokemon until only 1 remains!</p>
+			<p>Click on a white flag to begin.</p>
+			<p>Pick your favorite of the two flags until only 1 remains!</p>
 			<div id="grid">
 				<div id="choice">
 					<img src="images/egg.png" onclick="startG()">
 					<img src="images/egg.png" onclick="startG()">
-					<span>---</span> / <span>718</span> eliminated
+					<span>---</span> / <span>195</span> eliminated
 					<button type="button" id="skip" disabled="disabled" onclick="reroll(3)">Skip</button>
 				</div>
 				<div>
 					<img src="images/fill.png" class="fav">
 					<img src="images/fill.png" class="fav">
 					<img src="images/fill.png" class="fav">
-					2-4
 				</div>
 				<div>
 					<img src="images/fill.png" class="fav">
 					<img src="images/fill.png" class="fav">
 					<img src="images/fill.png" class="fav">
-					5-7
 				</div>
 				<div>
 					<img src="images/fill.png" class="fav">
 					<img src="images/fill.png" class="fav">
 					<img src="images/fill.png" class="fav">
-					8-10
 				</div>
 			</div>
 			<div id="settings">
@@ -90,9 +89,6 @@
 					<option value="5">V. (BW)</option>
 					<option value="6">VI. (XY)</option>
 				</select>
-				<br/>
-				<input type="checkbox" id="newPkm" selected="false" onchange="updateGen(document.getElementsByTagName('select')[0].value)"></input>
-
 			</div>
 		</div>
 		<script>
