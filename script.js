@@ -8,7 +8,7 @@ var pkmSeen = new Array();
 function startG() {
 	var _tmp = document.getElementsByTagName('select')[0];
 	_tmp.setAttribute('disabled', 'disabled');
-	document.getElementById('newpkm').setAttribute('disabled', 'disabled');
+	document.getElementById('newPkm').setAttribute('disabled', 'disabled');
 	document.getElementById('settings').className = 'disabled';
 	document.getElementById('skip').removeAttribute('disabled');
 
@@ -24,7 +24,7 @@ function updateGen(value, start) {
 					[1, 195]];
 	for(i = 0; i < _limits.length; i++) {
 		if(i == value) {
-			limit.min = document.getElementById('newpkm').checked ? _limits[i][0] : 1;
+			limit.min = document.getElementById('newPkm').checked ? _limits[i][0] : 1;
 			limit.max = _limits[i][1];
 			document.getElementsByTagName('span')[1].innerHTML = ''+ (limit.max - limit.min + 1);
 			if(!start)
@@ -74,17 +74,17 @@ function reroll(fav) {
 	}
 
 	//update choice image src
-	_tmp[0].src = 'images/' + _newpkm() + '.png';
+	_tmp[0].src = 'images/' + _newPkm() + '.png';
 	if(pkmLike.length == 0 && pkmSeen.length== 0)
 		_tmp[1].src = _tmp[0].src;
 	else 
-		_tmp[1].src = 'images/' + _newpkm() + '.png';
+		_tmp[1].src = 'images/' + _newPkm() + '.png';
 
 	//update eliminated text
 	document.getElementsByTagName('span')[0].innerHTML = ''+ pkmElim.length;
 } 
 
-function _newpkm() {
+function _newPkm() {
 	if(pkmLike.length <= 0) {
 		pkmLike = pkmLike.concat(pkmSeen);
 		pkmSeen.length = 0;
