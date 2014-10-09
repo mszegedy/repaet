@@ -85,8 +85,15 @@
 					<img src="images/fill.png" class="fav">
 					8-10
 				</div>
+				<div id="settings">
+					Generation:
+					<select onchange="updateGen(this.value)" enabled>
+						<option value="0">All</option>
+					</select>
+			</div>
 			</div>
 		</div>
+		
 		<script>
 			document.getElementById('newPkm').removeAttribute('disabled');
 			document.getElementsByTagName('select')[0].removeAttribute('disabled');
