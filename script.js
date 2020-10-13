@@ -6,8 +6,6 @@ var pkmLike = new Array();
 var pkmSeen = new Array();
 
 function startG() {
-	var _tmp = document.getElementsByTagName('select')[0];
-	_tmp.setAttribute('disabled', 'disabled');
 	document.getElementById('skip').removeAttribute('disabled');
 
 	//make sure the gen used will be what is selected
