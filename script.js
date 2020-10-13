@@ -7,18 +7,11 @@ var pkmSeen = new Array();
 
 function startG() {
 	document.getElementById('skip').removeAttribute('disabled');
-	pkmElim = new Array();
-	updateGen(true);
-	reroll(0);
-}
-
-function updateGen(value, start) {
 	document.getElementsByTagName('span')[1].innerHTML = ''+ (limit.max - limit.min + 1);
-	if(!start)
-		return;
 	for(j = limit.min; j <= limit.max; j++) {
 		pkmLike.push(j);
 	}
+	reroll(0);
 }
 
 function reroll(fav) {
