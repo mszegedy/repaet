@@ -14,7 +14,7 @@
 				position:relative;
 				top:50px;
 				height:auto;
-				width:1080px;
+				width:auto;
 				margin: 0 auto;
 				padding:5px;
 				background-color:#F0F0F0;
@@ -58,8 +58,8 @@
 				<div id="choice">
 					<img src="images/egg.png" height="640px" onclick="startG()">
 					<img src="images/egg.png" height="640px" onclick="startG()">
-					<br />
-					<span>0</span> / <span>195</span> eliminated
+					<br margin="20px 0px" />
+					<span>0</span> / <span>157</span> eliminated
 					<button type="button" id="skip" disabled="disabled" onclick="reroll(3)">Skip</button>
 				</div>
 				<div>
@@ -79,10 +79,6 @@
 				</div>
 			</div>
 		</div>
-		<script>
-			document.getElementById('newPkm').removeAttribute('disabled');
-			document.getElementsByTagName('select')[0].removeAttribute('disabled');
-		</script>
 		<div id="footer">
 			<div>
 				Based on this <a href="http://www.contrib.andrew.cmu.edu/~msandbot/pokemon/">webpage</a> created by a student at Carnegie Mellon. 
