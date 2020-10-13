@@ -11,24 +11,18 @@ function startG() {
 	//make sure the gen used will be what is selected
 	pkmElim = new Array();
 	pkmLike.length = 0;;
-	updateGen(_tmp.value, true);
+	updateGen(true);
 	reroll(0);
 }
 
 function updateGen(value, start) {
-	var _limits = [ [1, 157], [1, 157]];
-	for(i = 0; i < _limits.length; i++) {
-		if(i == value) {
-			limit.min = _limits[i][0];
-			limit.max = _limits[i][1];
-			document.getElementsByTagName('span')[1].innerHTML = ''+ (limit.max - limit.min + 1);
-			if(!start)
-				break;
-			for(j = limit.min; j <= limit.max; j++) {
-				pkmLike.push(j);
-			}
-			break;
-		}
+	limit.min = 1;
+	limit.max = 157;
+	document.getElementsByTagName('span')[1].innerHTML = ''+ (limit.max - limit.min + 1);
+	if(!start)
+		return;
+	for(j = limit.min; j <= limit.max; j++) {
+		pkmLike.push(j);
 	}
 }
 
