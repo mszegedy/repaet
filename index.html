@@ -58,6 +58,7 @@
 				<div id="choice">
 					<img src="images/egg.png" onclick="startG()">
 					<img src="images/egg.png" onclick="startG()">
+					<br />
 					<span>0</span> / <span>195</span> eliminated
 					<button type="button" id="skip" disabled="disabled" onclick="reroll(3)">Skip</button>
 				</div>
@@ -76,12 +77,6 @@
 					<img src="images/fill.png" class="fav">
 					<img src="images/fill.png" class="fav">
 				</div>
-			</div>
-			<div id="settings">
-				<select onchange="updateGen(this.value)" enabled>
-					<option value="0">Flags</option>
-				</select>
-				<input type="checkbox" id="newPkm" selected="false" onchange="updateGen(document.getElementsByTagName('select')[0].value)"></input>
 			</div>
 		</div>
 		<script>
