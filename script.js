@@ -8,8 +8,6 @@ var pkmSeen = new Array();
 function startG() {
 	var _tmp = document.getElementsByTagName('select')[0];
 	_tmp.setAttribute('disabled', 'disabled');
-	document.getElementById('newPkm').setAttribute('disabled', 'disabled');
-	document.getElementById('settings').className = 'disabled';
 	document.getElementById('skip').removeAttribute('disabled');
 
 	//make sure the gen used will be what is selected
@@ -20,11 +18,10 @@ function startG() {
 }
 
 function updateGen(value, start) {
-	var _limits = [ [1, 195], 
-					[1, 195]];
+	var _limits = [ [1, 157], [1, 157]];
 	for(i = 0; i < _limits.length; i++) {
 		if(i == value) {
-			limit.min = document.getElementById('newPkm').checked ? _limits[i][0] : 1;
+			limit.min = _limits[i][0];
 			limit.max = _limits[i][1];
 			document.getElementsByTagName('span')[1].innerHTML = ''+ (limit.max - limit.min + 1);
 			if(!start)
