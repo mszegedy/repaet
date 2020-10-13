@@ -1,5 +1,5 @@
 var limit = {
-	min: 1, max: 195
+	min: 1, max: 157
 };
 var pkmElim = new Array();
 var pkmLike = new Array();
@@ -7,17 +7,12 @@ var pkmSeen = new Array();
 
 function startG() {
 	document.getElementById('skip').removeAttribute('disabled');
-
-	//make sure the gen used will be what is selected
 	pkmElim = new Array();
-	pkmLike.length = 0;;
 	updateGen(true);
 	reroll(0);
 }
 
 function updateGen(value, start) {
-	limit.min = 1;
-	limit.max = 157;
 	document.getElementsByTagName('span')[1].innerHTML = ''+ (limit.max - limit.min + 1);
 	if(!start)
 		return;
@@ -32,7 +27,7 @@ function reroll(fav) {
 		return;
 	}
 	var _tmp = [document.getElementById('choice').getElementsByTagName('img')[0],
-				document.getElementById('choice').getElementsByTagName('img')[1]];
+		    document.getElementById('choice').getElementsByTagName('img')[1]];
 		//parse the dex# from choice image
 		_tmp.push(_tmp[0].src.slice(_tmp[0].src.search(/[0-9]*.png/), _tmp[0].src.length - 4));
 		_tmp.push(_tmp[1].src.slice(_tmp[1].src.search(/[0-9]*.png/), _tmp[1].src.length - 4));
